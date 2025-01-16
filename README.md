@@ -1,3 +1,7 @@
+# Walmart-Sales-Analysis
+
+
+
 ![image](https://github.com/user-attachments/assets/55beb3af-61b9-4c03-9e0d-b052f247eb80)
 
 
@@ -6,8 +10,8 @@
 
 
 
-# Walmart-Sales-Analysis
 
+## Project Overview:
 This project aims to explore the Walmart Sales data to understand top performing branches and products, sales trend of different products, customer behaviour. The aims is to study how sales strategies can be improved and optimized.
 
 ## Purposes Of The Project
