@@ -69,8 +69,15 @@ SET
 
 
 ## Some Business Questions and Answers
-### 1. What is the most selling product line?
-![image](https://github.com/user-attachments/assets/2dab3511-43bc-4239-acc4-63a28f55077f)
+
+**BASIC ANALYSIS**
+### 1. what are the unique branches, cities, and product lines are present in the data?
+![image](https://github.com/user-attachments/assets/37ba5f21-ed39-428b-9ba0-45edd426283c)
+![image](https://github.com/user-attachments/assets/fc061671-8cb0-455a-9993-06ab681d464f)
+![image](https://github.com/user-attachments/assets/4495a770-bb46-493b-b4fc-8bc4327a1ebd)
+
+
+
 ### 2. What is the total revenue by month?
 ![image](https://github.com/user-attachments/assets/bc80f806-841a-49b5-ac53-d4d49e9e49ce)
 ### 3. What product line had the largest revenue?
