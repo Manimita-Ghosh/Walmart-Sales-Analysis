@@ -23,8 +23,14 @@ The major aim of thie project is to gain insight into the sales data of Walmart 
 
 ### About the Dataset
 **Initial Dataset Fields :** Invoice ID, Branch, City, Customer type,	Gender,	Product line,	Unit price,	Quantity,	Tax 5%,	Total	Date,	Time,	Payment, cogs, gross margin, percentage, gross, income, Rating
+![image](https://github.com/user-attachments/assets/c46736ec-fb12-4101-bc75-e1380519e71e)
+
 **Newly Created Fields**
 **>** Date_new
+set sql_safe_updates = 0;
+UPDATE walmartsalesdata 
+SET 
+    Date_new = STR_TO_DATE(date, '%Y-%m-%d');
 
 
 
