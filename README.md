@@ -21,6 +21,16 @@ This project aims to explore the Walmart Sales data to understand top performing
 
 The major aim of thie project is to gain insight into the sales data of Walmart to understand the different factors that affect sales of the different branches.
 
+### About the Dataset
+**Initial Dataset Fields :** Invoice ID, Branch, City, Customer type,	Gender,	Product line,	Unit price,	Quantity,	Tax 5%,	Total	Date,	Time,	Payment, cogs, gross margin, percentage, gross, income, Rating
+**Newly Created Fields**
+**>** Date_new
+
+
+
+
+
+
 ## Some Business Questions and Answers
 ### 1. What is the most selling product line?
 ![image](https://github.com/user-attachments/assets/2dab3511-43bc-4239-acc4-63a28f55077f)
