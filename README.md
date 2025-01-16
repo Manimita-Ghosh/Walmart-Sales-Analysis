@@ -25,10 +25,9 @@ The major aim of thie project is to gain insight into the sales data of Walmart 
 **Initial Dataset Fields :** Invoice ID, Branch, City, Customer type,	Gender,	Product line,	Unit price,	Quantity,	Tax 5%,	Total	Date,	Time,	Payment, cogs, gross margin, percentage, gross, income, Rating
 ![image](https://github.com/user-attachments/assets/c46736ec-fb12-4101-bc75-e1380519e71e)
 
-**Newly Created Fields**
+**Newly Created Fields :**
 
-**>** Date_new
-
+**> Date_new**
 
 alter table walmartsalesdata add column Date_new date after date;
 
@@ -37,8 +36,35 @@ UPDATE walmartsalesdata
 SET 
     Date_new = STR_TO_DATE(date, '%Y-%m-%d');
 
+**> time_of_date**
 
+ alter table walmartsalesdata add column time_of_date varchar(20);
 
+ SELECT 
+    time,
+    (CASE
+        WHEN `time` BETWEEN '00:00:00' AND '12:00:00' THEN 'Morning'
+        WHEN `time` BETWEEN '12:01:00' AND '16:00:00' THEN 'Afternoon'
+        ELSE 'Evening'
+    END) AS time_of_date
+FROM
+    walmartsalesdata;
+
+**> day_name**
+
+alter table walmartsalesdata add column day_name varchar (10);
+
+UPDATE walmartsalesdata 
+SET 
+    day_name = DAYNAME(date_new);
+
+**> month_name** 
+
+alter table walmartsalesdata add column month_name varchar (10);
+
+UPDATE walmartsalesdata 
+SET 
+    month_name = MONTHNAME(date_new);
 
 
 
