@@ -26,7 +26,10 @@ The major aim of thie project is to gain insight into the sales data of Walmart 
 ![image](https://github.com/user-attachments/assets/c46736ec-fb12-4101-bc75-e1380519e71e)
 
 **Newly Created Fields**
-**>** ![image](https://github.com/user-attachments/assets/1c7aa838-3990-4350-93a5-5fbe02365956)
+
+**>** Date_new
+
+
 alter table walmartsalesdata add column Date_new date after date;
 
 set sql_safe_updates = 0;
