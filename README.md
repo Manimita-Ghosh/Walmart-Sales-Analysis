@@ -22,7 +22,9 @@ This project aims to explore the Walmart Sales data to understand top performing
 The major aim of thie project is to gain insight into the sales data of Walmart to understand the different factors that affect sales of the different branches.
 
 ### About the Dataset
-**Initial Dataset Fields :** Invoice ID, Branch, City, Customer type,	Gender,	Product line,	Unit price,	Quantity,	Tax 5%,	Total	Date,	Time,	Payment, cogs, gross margin, percentage, gross, income, Rating
+**Initial Dataset Fields :** 
+
+Invoice ID, Branch, City, Customer type,	Gender,	Product line,	Unit price,	Quantity,	Tax 5%,	Total	Date,	Time,	Payment, cogs, gross margin, percentage, gross, income, Rating
 ![image](https://github.com/user-attachments/assets/c46736ec-fb12-4101-bc75-e1380519e71e)
 
 **Newly Created Fields :**
