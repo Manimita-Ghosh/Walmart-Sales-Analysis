@@ -1,0 +1,67 @@
+create database walmart_sales;
+
+alter table walmartsalesdata add column Date_new date after date;
+set sql_safe_updates = 0;
+UPDATE walmartsalesdata 
+SET 
+    Date_new = STR_TO_DATE(date, '%Y-%m-%d');
+
+SELECT 
+    time,
+    (CASE
+        WHEN `time` BETWEEN '00:00:00' AND '12:00:00' THEN 'Morning'
+        WHEN `time` BETWEEN '12:01:00' AND '16:00:00' THEN 'Afternoon'
+        ELSE 'Evening'
+    END) AS time_of_date
+FROM
+    walmartsalesdata;
+    
+    alter table walmartsalesdata add column time_of_date varchar(20);
+    
+UPDATE walmartsalesdata 
+SET 
+    time_of_date = (CASE
+        WHEN `time` BETWEEN '00:00:00' AND '12:00:00' THEN 'Morning'
+        WHEN `time` BETWEEN '12:01:00' AND '16:00:00' THEN 'Afternoon'
+        ELSE 'Evening'
+    END);
+    
+   
+   alter table walmartsalesdata add column day_name varchar (10);
+   
+UPDATE walmartsalesdata 
+SET 
+    day_name = DAYNAME(date_new);
+   
+alter table walmartsalesdata add column month_name varchar (10);
+UPDATE walmartsalesdata 
+SET 
+    month_name = MONTHNAME(date_new);
+
+--------- Basic Level ---------------
+
+-- what are the unique branches, cities, and product lines are present in the data?
+
+SELECT DISTINCT
+    (branch) AS unique_branches
+FROM
+    walmartsalesdata;
+SELECT DISTINCT
+    (city) AS unique_cities
+FROM
+    walmartsalesdata;
+SELECT DISTINCT
+    (`Product line`) AS unique_productlines
+FROM
+    walmartsalesdata;
+
+-- What is the most common payment method?
+
+SELECT 
+    payment, COUNT(*) AS count
+FROM
+    walmartsalesdata
+GROUP BY Payment
+ORDER BY count DESC
+LIMIT 1;
+
