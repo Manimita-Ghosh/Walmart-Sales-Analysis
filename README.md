@@ -104,7 +104,15 @@ SET
 ![image](https://github.com/user-attachments/assets/b79e559d-9eae-4c6d-b2d7-1699aa1b7ee3)
 ### 4. Compare the average rating by branch or city. Do any locations consistently receive higher ratings?
 ![image](https://github.com/user-attachments/assets/757704d9-d35b-4f7d-8162-816f08d76990)
-### 5. 
+### 5. How do sales vary month-to-month?
+![image](https://github.com/user-attachments/assets/2e6beb51-b93b-411f-9e6c-746845e0d68d)
+
+
+**ADVANCED ANALYSIS**
+### 1. Perform a profitability analysis: Which branches or product lines have the highest gross margin percentages?
+![image](https://github.com/user-attachments/assets/187ad8c7-c131-4169-802d-54e92aa82754)
+
+
 
 
 
