@@ -86,7 +86,35 @@ SET
 ![image](https://github.com/user-attachments/assets/76fb8469-3408-4518-9e76-bc1df043ca8a)
 ### 4. What is the city with the largest revenue?
 ![image](https://github.com/user-attachments/assets/a3637f89-793a-47b7-afa7-aa1069668d76)
+### 5. What is the most common payment method?
+![image](https://github.com/user-attachments/assets/ebe5da9a-54a6-4a79-bd04-d62b93fb8f60)
+### 6. What is the most selling product line?
+![image](https://github.com/user-attachments/assets/2a133e2c-ff27-4937-a0f0-d3487462d902)
+### 7. Which gender has made the most purchases?
+![image](https://github.com/user-attachments/assets/61a99101-aaf7-4285-b99e-3e46485967fa)
+### 8. What are the total sales for each branch?
+![image](https://github.com/user-attachments/assets/639b6aee-2fb2-4e6f-ae76-b93e89091513)
+
+**INTERMEDIATE ANALYSIS**
+### 1. Analyze sales trends over time: Which months or days have the highest sales?
+![image](https://github.com/user-attachments/assets/3b3c71ea-9631-4939-a53f-1753ff14a407)
+### 2. What is the distribution of payment methods (e.g., Cash, Credit card, Ewallet)?
+![image](https://github.com/user-attachments/assets/0deeb648-e3e0-40a9-ae27-83c8f8e97f27)
+### 3. Which product line has the highest gross income and sales quantity?
+![image](https://github.com/user-attachments/assets/b79e559d-9eae-4c6d-b2d7-1699aa1b7ee3)
+### 4. Compare the average rating by branch or city. Do any locations consistently receive higher ratings?
+![image](https://github.com/user-attachments/assets/757704d9-d35b-4f7d-8162-816f08d76990)
 ### 5. 
+
+
+
+
+
+
+
+
+
+
 
 
 
