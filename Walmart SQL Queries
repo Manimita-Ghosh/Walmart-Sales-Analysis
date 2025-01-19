@@ -55,6 +55,29 @@ SELECT DISTINCT
 FROM
     walmartsalesdata;
 
+-- What is the total revenue by month?
+SELECT 
+    month_name, SUM(total) as TotalRevenue
+FROM
+    walmartsalesdata
+GROUP BY month_name;
+
+-- What product line had the largest revenue?
+SELECT 
+    `Product line`, ROUND(SUM(total), 0) AS total_revenue
+FROM
+    walmartsalesdata
+GROUP BY `Product line`
+ORDER BY ROUND(SUM(total), 0) DESC;
+
+-- What is the city with the largest revenue?
+SELECT 
+    city, ROUND(SUM(total), 0) AS total_revenue
+FROM
+    walmartsalesdata
+GROUP BY city
+ORDER BY ROUND(SUM(total), 0) DESC;
+
 -- What is the most common payment method?
 
 SELECT 
@@ -64,4 +87,74 @@ FROM
 GROUP BY Payment
 ORDER BY count DESC
 LIMIT 1;
+
+-- What is the most selling product line?
+SELECT 
+    `Product Line`, SUM(Quantity) AS TotalQuantitySold
+FROM
+    walmartsalesdata
+GROUP BY `Product Line`
+ORDER BY TotalQuantitySold DESC
+LIMIT 1;
+
+-- What are the total sales for each branch?
+select branch, count(*) as total_sales from walmartsalesdata group by branch;
+
+
+-- Which gender has made the most purchases?
+SELECT 
+    gender, COUNT(*) total_transaction
+FROM
+    walmartsalesdata
+GROUP BY Gender;
+
+--------------------------------Intermediate Level--------------------------
+-- Analyze sales trends over time: Which months or days have the highest sales?
+select month_name, day_name, sum(total) as total_sales from walmartsalesdata group by month_name, day_name order by total_sales desc;
+
+-- What is the distribution of payment methods (e.g., Cash, Credit card, Ewallet)? 
+SELECT 
+    Payment,
+    COUNT(*) AS Payment_Count,
+    ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM WalmartSalesData), 2) AS Percentage
+FROM WalmartSalesData
+GROUP BY Payment
+ORDER BY Payment_Count DESC;
+
+-- Which product line has the highest gross income and sales quantity?
+SELECT 
+    `Product line`,
+    SUM(`gross income`) AS Total_Gross_Income,
+    SUM(Quantity) AS Total_Quantity
+FROM WalmartSalesData
+GROUP BY `Product line`
+ORDER BY Total_Gross_Income DESC, Total_Quantity DESC;
+
+-- Compare the average rating by branch or city. Do any locations consistently receive higher ratings?
+select branch, city, avg(rating) avg_rating from walmartsalesdata group by Branch, city order by avg_rating desc;
+
+-- How do sales vary month-to-month?
+SELECT 
+    YEAR(date_new) AS year,
+    MONTH(date_new) AS month,
+    SUM(total) AS total_sales
+FROM
+    walmartsalesdata
+GROUP BY YEAR(date_new) , MONTH(date_new)
+ORDER BY year , month;
+
+----------------Advanced Level-----------------------------
+----Perform a profitability analysis: Which branches or product lines have the highest gross margin percentages?
+WITH BranchProfitability AS (
+    SELECT 
+        Branch,
+        AVG(`gross margin percentage`) AS Avg_Gross_Margin
+    FROM WalmartSalesData
+    GROUP BY Branch
+)
+SELECT 
+    Branch,
+    Avg_Gross_Margin,
+    RANK() OVER (ORDER BY Avg_Gross_Margin DESC) AS Profitability_Rank
+FROM BranchProfitability;
 
